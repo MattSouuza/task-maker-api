@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "8d1f85de-73a0-4052-bc1f-e92326e6bf72",
+		"name": "Task Maker API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13555877",
+		"_collection_link": "https://clara-cloud-dev.postman.co/workspace/Estudos~fdc027e6-6e9c-4384-b883-ab39d8f68d63/collection/13555877-8d1f85de-73a0-4052-bc1f-e92326e6bf72?action=share&creator=13555877&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "List Tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Task By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/task/f858aaa5-93c0-41f4-8c20-754133fe90bb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"task",
+						"f858aaa5-93c0-41f4-8c20-754133fe90bb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Estudar Ruby\",\r\n    \"description\": \"Todos os finais de semana às 10h\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/task/<<id>>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"task",
+						"<<id>>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/task/<<id>>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"task",
+						"<<id>>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/task/<<id>>/complete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"task",
+						"<<id>>",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "<<id>>"
+		}
+	]
+}
